@@ -5,7 +5,7 @@
 schema:
   schema_id: double_pinyin
   name: 雙拼
-  version: "0.9.6"
+  version: "0.9.7"
   author:
     - 佛振 <chen.sst@gmail.com>
   description: |
@@ -123,6 +123,8 @@ reverse_lookup:
   tips: 〔倉頡〕
   preedit_format:
     - "xlit|abcdefghijklmnopqrstuvwxyz|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
+  comment_format:
+    - xform/([nl])v/$1ü/
 
 punctuator:
   import_preset: default

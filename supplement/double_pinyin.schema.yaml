@@ -5,7 +5,7 @@
 schema:
   schema_id: double_pinyin
   name: 雙拼
-  version: "0.9.7"
+  version: "0.9.8"
   author:
     - 佛振 <chen.sst@gmail.com>
   description: |
@@ -135,6 +135,4 @@ key_binder:
 recognizer:
   import_preset: default
   patterns:
-    uppercase: "[A-Z][-'A-Za-z]*$"
-    cplusplus: "C[+#]+$"
     reverse_lookup: "`[a-z]*$"

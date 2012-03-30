@@ -3,13 +3,13 @@
 # encoding: utf-8
 
 schema:
-  schema_id: double_pinyin
-  name: 自然碼雙拼
-  version: "0.9.10"
+  schema_id: double_pinyin_flypy
+  name: 小鶴雙拼
+  version: "0.9"
   author:
-    - 佛振 <chen.sst@gmail.com>
+    - 鶴
   description: |
-    朙月拼音＋自然碼雙拼方案。
+    朙月拼音＋小鶴雙拼方案。
 
 switches:
   - name: ascii_mode
@@ -54,62 +54,62 @@ speller:
     - derive/^([aoe])([ioun])$/$1$1$2/
     - xform/^([aoe])(ng)?$/$1$1$2/
     - xform/iu$/Q/
-    - xform/[iu]a$/W/
-    - xform/[uv]an$/R/
+    - xform/(.)ei$/$1W/
+    - xform/uan$/R/
     - xform/[uv]e$/T/
-    - xform/ing$|uai$/Y/
+    - xform/un$/Y/
     - xform/^sh/U/
     - xform/^ch/I/
     - xform/^zh/V/
     - xform/uo$/O/
-    - xform/[uv]n$/P/
+    - xform/ie$/P/
     - xform/i?ong$/S/
-    - xform/[iu]ang$/D/
+    - xform/ing$|uai$/K/
+    - xform/(.)ai$/$1D/
     - xform/(.)en$/$1F/
     - xform/(.)eng$/$1G/
+    - xform/[iu]ang$/L/
     - xform/(.)ang$/$1H/
     - xform/ian$/M/
     - xform/(.)an$/$1J/
-    - xform/iao$/C/
-    - xform/(.)ao$/$1K/
-    - xform/(.)ai$/$1L/
-    - xform/(.)ei$/$1Z/
-    - xform/ie$/X/
+    - xform/(.)ou$/$1Z/
+    - xform/[iu]a$/X/
+    - xform/iao$/N/
+    - xform/(.)ao$/$1C/
     - xform/ui$/V/
-    - xform/(.)ou$/$1B/
-    - xform/in$/N/
-    - xlit/QWRTYUIOPSDFGHMJCKLZXVBN/qwrtyuiopsdfghmjcklzxvbn/
+    - xform/in$/B/
+    - xlit/QWRTYUIOPSDFGHJKLZXCVBNM/qwrtyuiopsdfghjklzxcvbnm/
     #- abbrev/^(.).+$/$1/
 
 translator:
   dictionary: luna_pinyin
-  prism: double_pinyin
+  prism: double_pinyin_flypy
   preedit_format:
-    - xform/([bpmnljqxy])n/$1in/
+    - xform/([bpmnljqxy])n/$1iao/
     - xform/(\w)g/$1eng/
     - xform/(\w)q/$1iu/
-    - xform/([gkhvuirzcs])w/$1ua/
-    - xform/(\w)w/$1ia/
+    - xform/(\w)w/$1ei/
     - xform/([dtnlgkhjqxyvuirzcs])r/$1uan/
     - xform/(\w)t/$1ve/
-    - xform/([gkhvuirzcs])y/$1uai/
-    - xform/(\w)y/$1ing/
+    - xform/(\w)y/$1un/
     - xform/([dtnlgkhvuirzcs])o/$1uo/
-    - xform/(\w)p/$1un/
+    - xform/(\w)p/$1ie/
     - xform/([jqx])s/$1iong/
     - xform/(\w)s/$1ong/
-    - xform/([jqxnl])d/$1iang/
-    - xform/(\w)d/$1uang/
+    - xform/(\w)d/$1ai/
     - xform/(\w)f/$1en/
     - xform/(\w)h/$1ang/
     - xform/(\w)j/$1an/
-    - xform/(\w)k/$1ao/
-    - xform/(\w)l/$1ai/
-    - xform/(\w)z/$1ei/
-    - xform/(\w)x/$1ie/
-    - xform/(\w)c/$1iao/
+    - xform/([gkhvuirzcs])k/$1uai/
+    - xform/(\w)k/$1ing/
+    - xform/([jqxnl])l/$1iang/
+    - xform/(\w)l/$1uang/
+    - xform/(\w)z/$1ou/
+    - xform/([gkhvuirzcs])x/$1ua/
+    - xform/(\w)x/$1ia/
+    - xform/(\w)c/$1ao/
     - xform/([dtgkhvuirzcs])v/$1ui/
-    - xform/(\w)b/$1ou/
+    - xform/(\w)b/$1in/
     - xform/(\w)m/$1ian/
     - xform/([aoe])\1(\w)/$1$2/
     - "xform/(^|[ '])v/$1zh/"

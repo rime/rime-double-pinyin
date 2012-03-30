@@ -9,7 +9,7 @@ schema:
   author:
     - 佛振 <chen.sst@gmail.com>
   description: |
-    朙月拼音，兼容智能ABC雙拼方案。
+    朙月拼音＋智能ABC雙拼方案。
 
 switches:
   - name: ascii_mode

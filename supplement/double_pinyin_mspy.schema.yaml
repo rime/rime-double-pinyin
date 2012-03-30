@@ -5,11 +5,11 @@
 schema:
   schema_id: double_pinyin_mspy
   name: MSPY雙拼
-  version: "0.9.8"
+  version: "0.9.10"
   author:
     - 佛振 <chen.sst@gmail.com>
   description: |
-    朙月拼音，兼容MSPY雙拼方案。
+    朙月拼音＋MSPY雙拼方案。
 
 switches:
   - name: ascii_mode
@@ -82,7 +82,7 @@ speller:
     - xform/in$/N/
     - xform/ing$/;/
     - xlit/QWRTYUIOPSDFGHMJCKLZXVBN/qwrtyuiopsdfghmjcklzxvbn/
-    - abbrev/^(.).+$/$1/
+    #- abbrev/^(.).+$/$1/
 
 translator:
   dictionary: luna_pinyin

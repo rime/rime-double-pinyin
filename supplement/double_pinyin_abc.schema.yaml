@@ -5,7 +5,7 @@
 schema:
   schema_id: double_pinyin_abc  # 專有的方案標識
   name: 智能ABC雙拼
-  version: "0.9"
+  version: "0.10"
   author:
     - 佛振 <chen.sst@gmail.com>
   description: |
@@ -117,6 +117,7 @@ translator:
 
 reverse_lookup:
   dictionary: cangjie5
+  enable_completion: true
   prefix: "`"
   tips: 〔倉頡〕
   preedit_format:

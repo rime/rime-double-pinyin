@@ -5,7 +5,7 @@
 schema:
   schema_id: double_pinyin_flypy
   name: 小鶴雙拼
-  version: "0.9"
+  version: "0.10"
   author:
     - 鶴
   description: |
@@ -120,6 +120,7 @@ translator:
 
 reverse_lookup:
   dictionary: cangjie5
+  enable_completion: true
   prefix: "`"
   tips: 〔倉頡〕
   preedit_format:

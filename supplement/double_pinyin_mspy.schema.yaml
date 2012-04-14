@@ -5,7 +5,7 @@
 schema:
   schema_id: double_pinyin_mspy
   name: MSPY雙拼
-  version: "0.9.10"
+  version: "0.10"
   author:
     - 佛振 <chen.sst@gmail.com>
   description: |
@@ -127,6 +127,7 @@ translator:
 
 reverse_lookup:
   dictionary: cangjie5
+  enable_completion: true
   prefix: "`"
   tips: 〔倉頡〕
   preedit_format:

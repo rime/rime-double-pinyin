@@ -5,7 +5,7 @@
 schema:
   schema_id: double_pinyin
   name: 自然碼雙拼
-  version: "0.10"
+  version: "0.11"
   author:
     - 佛振 <chen.sst@gmail.com>
   description: |
@@ -37,7 +37,6 @@ engine:
     - punct_segmentor
     - fallback_segmentor
   translators:
-    - echo_translator
     - punct_translator
     - r10n_translator
     - reverse_lookup_translator

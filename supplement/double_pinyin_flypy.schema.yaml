@@ -5,9 +5,10 @@
 schema:
   schema_id: double_pinyin_flypy
   name: 小鶴雙拼
-  version: "0.11"
+  version: "0.12"
   author:
-    - 鶴
+    - double pinyin layout by 鶴
+    - Rime schema by 佛振 <chen.sst@gmail.com>
   description: |
     朙月拼音＋小鶴雙拼方案。
 

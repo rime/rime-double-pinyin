@@ -1,11 +1,10 @@
 # Rime schema
-# vim: set sw=2 sts=2 et:
 # encoding: utf-8
 
 schema:
   schema_id: double_pinyin_flypy
   name: 小鶴雙拼
-  version: "0.12"
+  version: "0.13"
   author:
     - double pinyin layout by 鶴
     - Rime schema by 佛振 <chen.sst@gmail.com>
@@ -85,7 +84,7 @@ translator:
   dictionary: luna_pinyin
   prism: double_pinyin_flypy
   preedit_format:
-    - xform/([bpmnljqxy])n/$1iao/
+    - xform/(\w)n/$1iao/
     - xform/(\w)g/$1eng/
     - xform/(\w)q/$1iu/
     - xform/(\w)w/$1ei/

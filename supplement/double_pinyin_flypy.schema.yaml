@@ -4,7 +4,7 @@
 schema:
   schema_id: double_pinyin_flypy
   name: 小鶴雙拼
-  version: "0.14"
+  version: "0.15"
   author:
     - double pinyin layout by 鶴
     - Rime schema by 佛振 <chen.sst@gmail.com>
@@ -84,7 +84,7 @@ translator:
   dictionary: luna_pinyin
   prism: double_pinyin_flypy
   preedit_format:
-    - xform/(\w)n/$1iao/
+    - xform/([bpmfdtnljqx])n/$1iao/
     - xform/(\w)g/$1eng/
     - xform/(\w)q/$1iu/
     - xform/(\w)w/$1ei/

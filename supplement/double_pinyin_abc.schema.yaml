@@ -4,7 +4,7 @@
 schema:
   schema_id: double_pinyin_abc  # 專有的方案標識
   name: 智能ABC雙拼
-  version: "0.12"
+  version: "0.13"
   author:
     - 佛振 <chen.sst@gmail.com>
   description: |
@@ -111,7 +111,8 @@ translator:
     - "xform/(^|[ '])e/$1ch/"
     - "xform/(^|[ '])v/$1sh/"
     - xform/0(\w)/$1/          # 好了，現在可以把零聲母拿掉啦
-    - xform/([nljqxy])v/$1ü/   # 這樣纔是漢語拼音 :-)
+    - xform/([nl])v/$1ü/       # 這樣纔是漢語拼音 :-)
+    - xform/([jqxy])v/$1u/
 
 reverse_lookup:
   dictionary: cangjie5

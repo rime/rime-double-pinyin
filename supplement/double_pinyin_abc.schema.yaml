@@ -4,7 +4,7 @@
 schema:
   schema_id: double_pinyin_abc  # 專有的方案標識
   name: 智能ABC雙拼
-  version: "0.13"
+  version: "0.14"
   author:
     - 佛振 <chen.sst@gmail.com>
   description: |
@@ -103,6 +103,8 @@ translator:
     - xform/(\w)l/$1ai/
     - xform/(\w)z/$1iao/
     - xform/(\w)x/$1ie/
+    - xform/([gkhaev])c/$1uai/
+    - xform/(\w)c/$1in/
     - xform/(\w)b/$1ou/
     - xform/([nl])m/$1ve/
     - xform/([jqxy])m/$1ue/

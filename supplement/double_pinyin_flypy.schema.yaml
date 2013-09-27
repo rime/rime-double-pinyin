@@ -4,12 +4,14 @@
 schema:
   schema_id: double_pinyin_flypy
   name: 小鶴雙拼
-  version: "0.15"
+  version: "0.16"
   author:
     - double pinyin layout by 鶴
     - Rime schema by 佛振 <chen.sst@gmail.com>
   description: |
     朙月拼音＋小鶴雙拼方案。
+  dependencies:
+    - stroke
 
 switches:
   - name: ascii_mode
@@ -38,8 +40,8 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
-    - r10n_translator
     - reverse_lookup_translator
+    - script_translator
   filters:
     - simplifier
     - uniquifier
@@ -118,13 +120,13 @@ translator:
     - xform/([nl])v/$1ü/
 
 reverse_lookup:
-  dictionary: cangjie5
+  dictionary: stroke
   enable_completion: true
   prefix: "`"
   suffix: "'"
-  tips: 〔倉頡〕
+  tips: 〔筆畫〕
   preedit_format:
-    - "xlit|abcdefghijklmnopqrstuvwxyz|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
+    - xlit/hspnz/一丨丿丶乙/
   comment_format:
     - xform/([nl])v/$1ü/
 

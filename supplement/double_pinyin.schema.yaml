@@ -4,7 +4,7 @@
 schema:
   schema_id: double_pinyin
   name: 自然碼雙拼
-  version: "0.13"
+  version: "0.14"
   author:
     - 佛振 <chen.sst@gmail.com>
   description: |
@@ -18,6 +18,8 @@ switches:
     states: [ 中文, 西文 ]
   - name: full_shape
     states: [ 半角, 全角 ]
+  - name: ascii_punct
+    states: [ ，。, ，． ]
   - name: simplification
     states: [ 漢字, 汉字 ]
 

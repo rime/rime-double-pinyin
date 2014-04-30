@@ -4,7 +4,7 @@
 schema:
   schema_id: double_pinyin_mspy
   name: MSPY雙拼
-  version: "0.14"
+  version: "0.15"
   author:
     - 佛振 <chen.sst@gmail.com>
   description: |
@@ -18,10 +18,10 @@ switches:
     states: [ 中文, 西文 ]
   - name: full_shape
     states: [ 半角, 全角 ]
-  - name: ascii_punct
-    states: [ ，。, ，． ]
   - name: simplification
     states: [ 漢字, 汉字 ]
+  - name: ascii_punct
+    states: [ 。，, ．， ]
 
 engine:
   processors:

@@ -4,7 +4,7 @@
 schema:
   schema_id: double_pinyin_pyjj
   name: 拼音加加雙拼
-  version: "0.02"
+  version: "0.03"
   author:
     - 佛振 <chen.sst@gmail.com>
     - Ye Zhou
@@ -97,10 +97,9 @@ translator:
     - xform/([dtnlgkhjqxyvuirzcs])c/$1UAN/
     - xform/0r/ER/
     - xform/([dtgkhvuirzcs])v/$1UI/
-    - xform/(\w)x/$1VE/
-    - xform/(\w)x/$1VE/
-    - xform/([gkhvuirzcs])x/$1UAI/
     - xform/(\w)v/$1V/
+    - xform/([gkhvuirzcs])x/$1UAI/
+    - xform/(\w)x/$1VE/
     - xform/([dtnlgkhvuirzcs])o/$1UO/
     - xform/(\w)z/$1UN/
     - xform/([jqx])y/$1IONG/

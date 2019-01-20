@@ -2,7 +2,7 @@
 
 配方： ℞ **double-pinyin**
 
-[Rime](http://rime.im) 雙拼輸入方案
+[Rime](https://rime.im) 雙拼輸入方案
 
 已收錄以下雙拼方案：
 

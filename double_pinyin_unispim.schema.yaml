@@ -1,0 +1,107 @@
+# Rime schema
+# vim: set sw=2 sts=2 et:
+# encoding: utf-8
+
+schema:
+  schema_id: double_pinyin_unispim
+  name: 紫光双拼<繁体>
+  version: "0.9.8"
+  author:
+    - krsun <krsun@126.com>
+  description: |
+    朙月拼音，兼容紫光雙拼方案。
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 西文 ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: simplification
+    states: [ 漢字, 汉字 ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - echo_translator
+    - punct_translator
+    - r10n_translator
+    - reverse_lookup_translator
+  filters:
+    - simplifier
+    - uniquifier
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcba;
+  initials: zyxwvutsrqponmlkjihgfedcba
+  delimiter: " '"
+  algebra:
+    - erase/^xx$/
+    - derive/^([jqxy])u$/$1v/
+    - xform/^([aoe].*)$/O$1/
+    - xform/^ch/A/
+    - xform/^sh/I/
+    - xform/^zh/U/
+    - xform/iao$/B/
+    - xform/ao$/Q/
+    - xform/eng$/T/
+    - xform/en$/W/
+    - xform/[iu]ang$/G/
+    - xform/ang$/S/
+    - xform/uan$/L/
+    - xform/ian$/F/
+    - xform/an$/R/
+    - xform/ing$/C/
+    - xform/in$|uai$/Y/
+    - xform/i?ong$/H/
+    - xform/ai$/P/
+    - xform/ei$/K/
+    - xform/(.)er$/$1J/
+    - xform/ia$/X/
+    - xform/ie$/D/
+    - xform/iu$/J/
+    - xform/ou$/Z/
+    - xform/ua$/X/
+    - xform/uo$/O/
+    - xform/ve|ue|ui$/N/
+    - xform/un$/M/
+    - xlit/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/
+
+translator:
+  dictionary: luna_pinyin
+  prism: double_pinyin_unispim
+  preedit_format:
+
+reverse_lookup:
+  dictionary: cangjie5
+  prefix: "`"
+  tips: 〔倉頡〕
+  preedit_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
+  comment_format:
+    - xform/([nl])v/$1ü/
+
+punctuator:
+  import_preset: default
+
+key_binder:
+  import_preset: default
+
+recognizer:
+  import_preset: default
+  patterns:
+    reverse_lookup: "`[a-z]*$"

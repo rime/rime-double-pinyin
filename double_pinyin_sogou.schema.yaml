@@ -1,0 +1,108 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: double_pinyin_sogou
+  name: 搜狗雙拼
+  version: "0.1"
+  author:
+    - mehhaha
+  description: |
+    朙月拼音＋搜狗雙拼方案。
+  dependencies:
+    - stroke
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 西文 ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: simplification
+    states: [ 漢字, 汉字 ]
+  - name: ascii_punct
+    states: [ 。，, ．， ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - reverse_lookup_translator
+    - script_translator
+  filters:
+    - simplifier
+    - uniquifier
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcba;
+  delimiter: " '"
+  algebra:
+    - erase/^xx$/             # 碼表中有幾個拼音不明的字，編碼成xx了，消滅他
+    - derive/^([jqxy])u$/$1v/ # ju -> jv, qu -> qv, xu -> xv, yu -> yv
+    - xform/^([aoe].*)$/Ⓞ$1/  # 添上固定的零聲母o，先標記爲大寫O
+    - xform/er$|uan$/Ⓡ/       # R uan 必须在 an 前面
+    - xform/ian$/Ⓜ/           # M ian 必须在 an 前面
+    - xform/iao$/Ⓒ/           # C iao 必须在 ao 前面
+    - xform/v$|uai$/Ⓨ/        # Y uai 必须在 ai 前面
+    - xform/iu$/Ⓠ/            # Q
+    - xform/[iu]a$/Ⓦ/         # W
+    - xform/[uv]e$/Ⓣ/         # T
+    - xform/^sh/Ⓤ/            # U - sh
+    - xform/^ch/Ⓘ/            # I - ch
+    - xform/uo$/Ⓞ/            # O
+    - xform/[uv]n$/Ⓟ/         # P
+    - xform/i?ong$/Ⓢ/         # S
+    - xform/[iu]ang$/Ⓓ/       # D
+    - xform/(.)en$/$1Ⓕ/       # F
+    - xform/(.)eng$/$1Ⓖ/      # G
+    - xform/(.)ang$/$1Ⓗ/      # H
+    - xform/(.)an$/$1Ⓙ/       # J
+    - xform/(.)ao$/$1Ⓚ/       # K
+    - xform/(.)ai$/$1Ⓛ/       # L
+    - xform/ing$/;/           # ;
+    - xform/(.)ei$/$1Ⓩ/       # Z
+    - xform/ie$/Ⓧ/            # X
+    - xform/^zh|ui$/Ⓥ/        # V zh
+    - xform/(.)ou$/$1Ⓑ/       # B
+    - xform/in$/Ⓝ/            # N
+    - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⓂⒿⒸⓀⓁⓏⓍⓋⒷⓃⓄ/qwrtyuiopsdfghmjcklzxvbno/
+
+translator:
+  dictionary: luna_pinyin     # 與【朙月拼音】共用詞典
+  prism: double_pinyin_sogou  # prism 要以本輸入方案的名稱來命名，以免把朙月拼音的拼寫映射表覆蓋掉
+
+reverse_lookup:
+  dictionary: stroke
+  enable_completion: true
+  prefix: "`"
+  suffix: "'"
+  tips: 〔筆畫〕
+  preedit_format:
+    - xlit/hspnz/一丨丿丶乙/
+  comment_format:
+    - xform/([nl])v/$1ü/
+
+punctuator:
+  import_preset: default
+
+key_binder:
+  import_preset: default
+
+recognizer:
+  import_preset: default
+  patterns:
+    reverse_lookup: "`[a-z]*'?$"

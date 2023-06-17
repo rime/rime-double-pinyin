@@ -53,32 +53,32 @@ speller:
   algebra:  # 拼寫運算規則，這個纔是實現雙拼方案的重點。寫法有很多種，當然也可以把四百多個音節碼一條一條地列舉
     - erase/^xx$/             # 碼表中有幾個拼音不明的字，編碼成xx了，消滅他
     - derive/^([jqxy])u$/$1v/
-    - xform/^zh/A/            # 替換聲母鍵，用大寫以防與原有的字母混淆
-    - xform/^ch/E/
-    - xform/^sh/V/
-    - xform/^([aoe].*)$/O$1/  # 添上固定的零聲母o，先標記爲大寫O
-    - xform/ei$/Q/            # 替換韻母鍵
-    - xform/ian$/W/           # ※2
-    - xform/er$|iu$/R/        # 對應兩種韻母的；音節er現在變爲OR了
-    - xform/[iu]ang$/T/       # ※1
-    - xform/ing$/Y/
-    - xform/uo$/O/
-    - xform/uan$/P/           # ※3
-    - xform/i?ong$/S/
-    - xform/[iu]a$/D/
-    - xform/en$/F/
-    - xform/eng$/G/
-    - xform/ang$/H/           # 檢查一下在此之前是否已轉換過了帶界音的ang；好，※1處有了
-    - xform/an$/J/            # 如果※2、※3還無有出現在上文中，應該把他們提到本行之前
-    - xform/iao$/Z/           # 對——像這樣讓iao提前出場
-    - xform/ao$/K/
-    - xform/in$|uai$/C/       # 讓uai提前出場
-    - xform/ai$/L/
-    - xform/ie$/X/
-    - xform/ou$/B/
-    - xform/un$/N/
-    - xform/[uv]e$|ui$/M/
-    - xlit/QWERTYOPASDFGHJKLZXCVBNM/qwertyopasdfghjklzxcvbnm/  # 最後把雙拼碼全部變小寫
+    - xform/^zh/ᴀ/            # 替換聲母鍵，用大寫以防與原有的字母混淆
+    - xform/^ch/ᴇ/
+    - xform/^sh/ᴠ/
+    - xform/^([aoe].*)$/ᴏ$1/  # 添上固定的零聲母o，先標記爲大寫ᴏ
+    - xform/ei$/ǫ/            # 替換韻母鍵
+    - xform/ian$/ᴡ/           # ※2
+    - xform/er$|iu$/ʀ/        # 對應兩種韻母的；音節er現在變爲ᴏʀ了
+    - xform/[iu]ang$/ᴛ/       # ※1
+    - xform/ing$/ʏ/
+    - xform/uo$/ᴏ/
+    - xform/uan$/ᴘ/           # ※3
+    - xform/i?ong$/s/
+    - xform/[iu]a$/ᴅ/
+    - xform/en$/ғ/
+    - xform/eng$/ɢ/
+    - xform/ang$/ʜ/           # 檢查一下在此之前是否已轉換過了帶界音的ang；好，※1處有了
+    - xform/an$/ᴊ/            # 如果※2、※3還無有出現在上文中，應該把他們提到本行之前
+    - xform/iao$/ᴢ/           # 對——像這樣讓iao提前出場
+    - xform/ao$/ᴋ/
+    - xform/in$|uai$/ᴄ/       # 讓uai提前出場
+    - xform/ai$/ʟ/
+    - xform/ie$/x/
+    - xform/ou$/ʙ/
+    - xform/un$/ɴ/
+    - xform/[uv]e$|ui$/ᴍ/
+    - xlit/ǫᴡᴇʀᴛʏᴏᴘᴀsᴅғɢʜᴊᴋʟᴢxᴄᴠʙɴᴍ/qwertyopasdfghjklzxcvbnm/  # 最後把雙拼碼全部變小寫
 
 translator:
   dictionary: luna_pinyin     # 與【朙月拼音】共用詞典

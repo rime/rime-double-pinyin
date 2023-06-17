@@ -56,32 +56,32 @@ speller:
     - derive/^([jqxy])u$/$1v/
     - derive/^([aoe].*)$/o$1/
     - xform/^([ae])(.*)$/$1$1$2/
-    - xform/iu$/N/
-    - xform/[iu]a$/B/
-    - xform/er$|ing$/Q/
-    - xform/[uv]an$/C/
-    - xform/[uv]e$|uai$/X/
-    - xform/^sh/I/
-    - xform/^ch/U/
-    - xform/^zh/V/
-    - xform/uo$/O/
-    - xform/[uv]n$/Z/
-    - xform/i?ong$/Y/
-    - xform/[iu]ang$/H/
-    - xform/(.)en$/$1R/
-    - xform/(.)eng$/$1T/
-    - xform/(.)ang$/$1G/
-    - xform/ian$/J/
-    - xform/(.)an$/$1F/
-    - xform/iao$/K/
-    - xform/(.)ao$/$1D/
-    - xform/(.)ai$/$1S/
-    - xform/(.)ei$/$1W/
-    - xform/ie$/M/
-    - xform/ui$/V/
-    - xform/(.)ou$/$1P/
-    - xform/in$/L/
-    - xlit/QWRTYUIOPSDFGHMJCKLZXVBN/qwrtyuiopsdfghmjcklzxvbn/
+    - xform/iu$/ɴ/
+    - xform/[iu]a$/ʙ/
+    - xform/er$|ing$/ǫ/
+    - xform/[uv]an$/ᴄ/
+    - xform/[uv]e$|uai$/x/
+    - xform/^sh/ɪ/
+    - xform/^ch/ᴜ/
+    - xform/^zh/ᴠ/
+    - xform/uo$/ᴏ/
+    - xform/[uv]n$/ᴢ/
+    - xform/i?ong$/ʏ/
+    - xform/[iu]ang$/ʜ/
+    - xform/(.)en$/$1ʀ/
+    - xform/(.)eng$/$1ᴛ/
+    - xform/(.)ang$/$1ɢ/
+    - xform/ian$/ᴊ/
+    - xform/(.)an$/$1ғ/
+    - xform/iao$/ᴋ/
+    - xform/(.)ao$/$1ᴅ/
+    - xform/(.)ai$/$1s/
+    - xform/(.)ei$/$1ᴡ/
+    - xform/ie$/ᴍ/
+    - xform/ui$/ᴠ/
+    - xform/(.)ou$/$1ᴘ/
+    - xform/in$/ʟ/
+    - xlit/ǫᴡʀᴛʏᴜɪᴏᴘsᴅғɢʜᴍᴊᴄᴋʟᴢxᴠʙɴ/qwrtyuiopsdfghmjcklzxvbn/
     #- abbrev/^(.).+$/$1/
 
 translator:
@@ -89,37 +89,37 @@ translator:
   prism: double_pinyin_pyjj
   preedit_format:
     - xform/([aoe])(\w)/0$2/
-    - xform/([bpmnljqxy])l/$1IN/
-    - xform/(\w)t/$1ENG/
-    - xform/(\w)n/$1IU/
-    - xform/([gkhvuirzcs])b/$1UA/
-    - xform/(\w)b/$1IA/
-    - xform/([dtnlgkhjqxyvuirzcs])c/$1UAN/
-    - xform/0r/ER/
-    - xform/([dtgkhvuirzcs])v/$1UI/
-    - xform/(\w)v/$1V/
-    - xform/([gkhvuirzcs])x/$1UAI/
-    - xform/(\w)x/$1VE/
-    - xform/([dtnlgkhvuirzcs])o/$1UO/
-    - xform/(\w)z/$1UN/
-    - xform/([jqx])y/$1IONG/
-    - xform/(\w)y/$1ONG/
-    - xform/([jqxnl])h/$1IANG/
-    - xform/(\w)h/$1UANG/
-    - xform/(\w)r/$1EN/
-    - xform/(\w)g/$1ANG/
-    - xform/(\w)f/$1AN/
-    - xform/(\w)d/$1AO/
-    - xform/(\w)s/$1AI/
-    - xform/(\w)w/$1EI/
-    - xform/(\w)m/$1IE/
-    - xform/(\w)k/$1IAO/
-    - xform/(\w)p/$1OU/
-    - xform/(\w)j/$1IAN/
-    - xform/(0)q/$1ER/
-    - xform/(\w)q/$1ING/
+    - xform/([bpmnljqxy])l/$1ɪɴ/
+    - xform/(\w)t/$1ᴇɴɢ/
+    - xform/(\w)n/$1ɪᴜ/
+    - xform/([gkhvuirzcs])b/$1ᴜᴀ/
+    - xform/(\w)b/$1ɪᴀ/
+    - xform/([dtnlgkhjqxyvuirzcs])c/$1ᴜᴀɴ/
+    - xform/0r/ᴇʀ/
+    - xform/([dtgkhvuirzcs])v/$1ᴜɪ/
+    - xform/(\w)v/$1ᴠ/
+    - xform/([gkhvuirzcs])x/$1ᴜᴀɪ/
+    - xform/(\w)x/$1ᴠᴇ/
+    - xform/([dtnlgkhvuirzcs])o/$1ᴜᴏ/
+    - xform/(\w)z/$1ᴜɴ/
+    - xform/([jqx])y/$1ɪᴏɴɢ/
+    - xform/(\w)y/$1ᴏɴɢ/
+    - xform/([jqxnl])h/$1ɪᴀɴɢ/
+    - xform/(\w)h/$1ᴜᴀɴɢ/
+    - xform/(\w)r/$1ᴇɴ/
+    - xform/(\w)g/$1ᴀɴɢ/
+    - xform/(\w)f/$1ᴀɴ/
+    - xform/(\w)d/$1ᴀᴏ/
+    - xform/(\w)s/$1ᴀɪ/
+    - xform/(\w)w/$1ᴇɪ/
+    - xform/(\w)m/$1ɪᴇ/
+    - xform/(\w)k/$1ɪᴀᴏ/
+    - xform/(\w)p/$1ᴏᴜ/
+    - xform/(\w)j/$1ɪᴀɴ/
+    - xform/(0)q/$1ᴇʀ/
+    - xform/(\w)q/$1ɪɴɢ/
     - xform/0(\w)/$1/
-    - xlit/QWRTYUIOPSDFGHMJCKLZXVBNAEIOU/qwrtyuiopsdfghmjcklzxvbnaeiou/
+    - xlit/ǫᴡʀᴛʏᴜɪᴏᴘsᴅғɢʜᴍᴊᴄᴋʟᴢxᴠʙɴᴀᴇɪᴏᴜ/qwrtyuiopsdfghmjcklzxvbnaeiou/
     - "xform/(^|[ '])v/$1zh/"
     - "xform/(^|[ ‘])u/$1ch/"
     - "xform/(^|[ ‘])i/$1sh/"

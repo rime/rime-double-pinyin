@@ -91,7 +91,7 @@ translator:
     - xform/(\w)w/$1ian/
     - xform/([dtnljqx])r/$1iu/  # 對應多種韻母的雙拼碼，按搭配的聲母做區分（最好別用排除式如 [^o]r 容易出狀況）
     - xform/0r/0er/             # 另一種情況，注意先不消除0，以防後面把e當作聲母轉換爲ch
-    - xform/([nljqx])t/$1iang/
+    - xform/([nljqxb])t/$1iang/
     - xform/(\w)t/$1uang/       # 上一行已經把對應到 iang 的雙拼碼 t 消滅，於是這裏不用再列舉相配的聲母
     - xform/(\w)y/$1ing/
     - xform/([dtnlgkhaevrzcs])o/$1uo/

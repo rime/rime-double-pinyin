@@ -104,7 +104,7 @@ translator:
     - xform/(\w)z/$1UN/
     - xform/([jqx])y/$1IONG/
     - xform/(\w)y/$1ONG/
-    - xform/([jqxnl])h/$1IANG/
+    - xform/([jqxnlb])h/$1IANG/
     - xform/(\w)h/$1UANG/
     - xform/(\w)r/$1EN/
     - xform/(\w)g/$1ANG/
